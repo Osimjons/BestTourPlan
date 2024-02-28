@@ -373,24 +373,22 @@ use {
           justify-content: space-between;
 }
 .title-block__left {
-  width: 100%;
-}
-.title-block__wrap {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  grid-template-areas: "star star" "title offer";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 @media (max-width: 667px) {
-  .title-block__wrap {
-    grid-template-areas: "offer star" "title title";
+  .title-block__left {
+    width: 100%;
   }
 }
 .title-block__stars {
-  grid-area: star;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 .title-block__stars .icon {
   fill: #bdbdbd;
@@ -401,21 +399,37 @@ use {
 }
 @media (max-width: 667px) {
   .title-block__stars {
-    place-self: end;
-    -ms-flex-item-align: center;
-        align-self: center;
+    -ms-flex-preferred-size: content;
+        flex-basis: content;
   }
 }
+.title-block__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
 .title-block__title {
-  grid-area: title;
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 2.4rem;
   color: #333;
   margin-right: 15px;
 }
+@media (max-width: 667px) {
+  .title-block__title {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
 .title-block__span {
-  grid-area: offer;
   font-family: "Mulish", sans-serif;
   font-weight: 600;
   font-size: 10px;
@@ -423,8 +437,19 @@ use {
   background-color: #E6143A;
   padding: 5px 9px;
   border-radius: 3px;
-  width: 70px;
-  height: 20px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+@media (max-width: 667px) {
+  .title-block__span {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 .title-block__subtitle {
   font-family: "Mulish", sans-serif;
