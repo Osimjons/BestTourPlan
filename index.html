@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/index.css" />
+  <script src="js/script.js" defer></script>
+  <title>Best Tour Plan</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__top">
+          <div class="header__logo">
+            <a href="#" class="header__logo-link">
+              <svg class="icon icon_logo">
+                <use xlink:href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="header__search input">
+            <input autocomplete="off" type="text" placeholder="Search Location |" class="input__inp" />
+            <button type="button" class="button input__btn">
+              <svg class="icon icon_search">
+                <use xlink:href="img/sprite.svg#icon_search"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="header__user">
+            <img class="header__user-img" src="img/user-photo.jpeg" alt="photo user" />
+            <span class="header__user-name">Lorem</span>
+          </div>
+          <!-- Burger start -->
+          <div class="header__burger burger">
+            <span class="burger__line"></span>
+          </div>
+          <!-- Burger end -->
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="header__container">
+          <ul class="header__list">
+            <li class="header__item header__item_hidden">
+              <div class="header__item_mobile-visible header__user">
+                <img class="header__user-img" src="img/user-photo.jpeg" alt="photo user" />
+                <span class="header__user-name">Lorem</span>
+              </div>
+            </li>
+            <li class="header__item header__item_hidden">
+              <div class="header__item_mobile-visible header__search input">
+                <input autocomplete="off" type="text" placeholder="Search Location |" class="input__inp" />
+                <button type="button" class="button input__btn">
+                  <svg class="icon icon_search">
+                    <use xlink:href="img/sprite.svg#icon_search"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">All Deals</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">Hotels</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">Activities</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">Hotel Day Packages</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">Restaurants</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">Events</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">Rodrigues</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero__container">
+          <div class="hero__title-block title-block">
+            <div class="title-block__left">
+              <div class="title-block__wrap">
+                <div class="title-block__stars">
+                  <svg class="icon icon_star">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                  <svg class="icon icon_star">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                  <svg class="icon icon_star">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                  <svg class="icon icon_star">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                  <svg class="icon icon_star">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                </div>
+                <h1 class="title-block__title">GRAND HILTON HOTEL</h1>
+                <span class="title-block__span">Flash Offer</span>
+              </div>
+
+              <p class="title-block__subtitle">
+                Half-Board / All Inclusive + Complimentary Activities + Child
+                Stays Free
+              </p>
+            </div>
+            <div class="title-block__right">
+              <span class="title-block__rattings">User Rattings</span>
+              <span class="title-block__counter">4.5/<span>5</span></span>
+            </div>
+          </div>
+          <div class="hero__main main">
+            <!-- grid -->
+            <div class="main__slider-block">
+              <img src="img/hero-bg.jpg" alt="hero bg" class="main__slider" />
+            </div>
+            <div class="main__price price">
+              <div class="price-card">
+                <div class="price-card__wrap">
+                  <div class="price-card__left">
+                    <span class="price-card__span">price starts as</span>
+                    <span class="price-card__span price-card__span_price">$ 8,500</span>
+                    <span class="price-card__span">per room / night</span>
+                  </div>
+                  <div class="price-card__right">
+                    <span class="price-card__span price-card__span_guests">
+                      <svg class="icon icon_user">
+                        <use xlink:href="img/sprite.svg#icon_user"></use>
+                      </svg>
+                      2 x Guests</span>
+                    <span class="price-card__span price-card__span_room">
+                      <svg class="icon icon_home">
+                        <use xlink:href="img/sprite.svg#icon_home"></use>
+                      </svg>
+                      1 x Room</span>
+                  </div>
+                </div>
+                <div class="price-card__bottom">
+                  <span>Quick Booking</span>
+                  <span>12100</span>
+                </div>
+                <button class="button btn-big">View Other Options</button>
+              </div>
+            </div>
+            <div class="main__map">
+              <img src="img/Map.jpg " alt="map">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">footer</footer>
+  </div>
+</body>
+
+</html>
+<!-- grid -->

@@ -1,0 +1,228 @@
+@use "variabless" as v;
+@use "mixins" as m;
+
+.hero {
+  padding-block: 3rem;
+  // .hero__title-block
+  &__title-block {
+  }
+}
+.title-block {
+  padding-block: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // .title-block__left
+  &__left {
+    width: 100%;
+  }
+  // .title-block__wrap
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    grid-template-areas:
+      "star star"
+      "title offer";
+    @media (max-width: v.$media667) {
+      grid-template-areas:
+        "offer star"
+        "title title";
+    }
+  }
+  // .title-block__stars
+  &__stars {
+    grid-area: star;
+    // flex-basis: 100%;
+    .icon {
+      fill: v.$color-grey;
+      // .icon_star
+      &_star {
+        width: 8px;
+        aspect-ratio: 1;
+      }
+    }
+    @media (max-width: v.$media667) {
+      place-self: end;
+      align-self: center;
+    }
+  }
+  // .title-block__title
+  &__title {
+    grid-area: title;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: v.$text-color;
+    margin-right: 15px;
+  }
+  // .title-block__span
+  &__span {
+    grid-area: offer;
+
+    font-family: v.$font-family;
+    font-weight: 600;
+    font-size: 10px;
+    color: v.$color-white;
+    background-color: v.$bg-btn;
+    padding: 5px 9px;
+    border-radius: 3px;
+    width: 70px;
+    height: 20px;
+  }
+  // .title-block__subtitle
+  &__subtitle {
+    font-family: v.$font-family;
+    font-size: 12px;
+    color: v.$text-color;
+  }
+  // .title-block__right
+  &__right {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-self: flex-end;
+    background-color: v.$bg-btn;
+    padding: 8px;
+    border-radius: 5px;
+    @media (max-width: v.$media667) {
+      display: none;
+    }
+  }
+  // .title-block__rattings
+  &__rattings {
+    font-family: v.$font-family;
+    font-weight: 600;
+    font-size: 8px;
+    color: v.$color-white;
+  }
+  // .title-block__counter
+  &__counter {
+    font-family: v.$font-family;
+    font-weight: 700;
+    font-size: 14px;
+    color: v.$color-white;
+    & span {
+      font-size: 10px;
+    }
+  }
+}
+
+
+
+.main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+  grid-template-areas:
+    "slider price"
+    "slider map";
+  // .main__slider-block
+  &__slider-block {
+    grid-area: slider;
+  }
+  // .main__slider
+  &__slider {
+    width: 100%;
+    height: 100%;
+  }
+  // .main__price
+  &__price {
+    grid-area: price;
+  }
+  // .main__map
+  &__map {
+    grid-area: map;
+  }
+  @media (max-width: v.$media667) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "slider slider"
+      "price map";
+  }
+  @media (max-width: v.$media500) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "slider "
+      "price"
+      "map";
+  }
+}
+
+.price {
+  &-card {
+    max-width: 350px;
+    width: 100%;
+    // height: 100%;
+    background-color: v.$bg-blue;
+    padding: 29px 29px 26px 26px;
+    border-radius: 4px;
+    // .price-card__wrap
+    &__wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    // .price-card__left
+    &__left {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+    // .price-card__span
+    &__span {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-family: v.$second-family;
+      font-weight: 400;
+      font-size: 10px;
+      color: #fff;
+
+      &_price {
+        font-family: v.$second-family;
+        font-weight: 800;
+        font-size: 24px;
+        color: #fff;
+      }
+      & svg {
+        width: 14px;
+        height: 14px;
+        fill: v.$color-white;
+      }
+    }
+    // .price-card__right
+    &__right {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    // .price-card__bottom
+    &__bottom {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 10px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+      margin-bottom: 17px;
+    }
+    .btn-big {
+      text-align: center;
+      width: 100%;
+      padding-block: 13px;
+      font-family: var(--second-family);
+      font-weight: 600;
+      font-size: 14px;
+      color: #fff;
+    }
+  }
+}

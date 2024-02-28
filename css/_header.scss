@@ -1,0 +1,135 @@
+@use "variabless" as v;
+@use "mixins" as m;
+.header {
+  background-color: v.$color-white;
+  position: relative;
+  max-height: 200px;
+  // .header__top
+  &__top {
+    padding-block: 40px;
+    @include m.d-flex(center, space-between);
+
+    @media (max-width: v.$media768) {
+      padding-block: 30px;
+    }
+  }
+  // .header__logo
+  &__logo {
+    // .header__logo-link
+    &-link {
+      display: flex;
+      align-items: center;
+      & .icon_logo {
+        max-width: 175px;
+        max-height: 18px;
+      }
+    }
+  }
+  // .header__search
+  &__search {
+    & .icon_search {
+      width: 16px;
+      height: 16px;
+      fill: v.$color-white;
+    }
+    @media (max-width: v.$media768) {
+      width: 340px;
+    }
+    @media (max-width: v.$media667) {
+      display: none;
+    }
+  }
+  // .header__user
+  &__user {
+    // .header__user-name
+    @include m.d-flex(center, space-between);
+    gap: 18px;
+    &-name {
+      text-transform: uppercase;
+      font-size: 14px;
+      color: v.$text-color;
+      @media (max-width: v.$media667) {
+        @include m.d-flex(center, center, space-between);
+        margin-top: 10px;
+        color: v.$color-white;
+      }
+    }
+    // .header__user-img
+    &-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      @media (max-width: v.$media667) {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    @media (max-width: v.$media667) {
+      display: none;
+    }
+  }
+  // .header__burger
+  &__burger {
+    display: none;
+    @media (max-width: v.$media667) {
+      display: flex;
+    }
+  }
+  // .header__bottom
+  &__bottom {
+    background-color: v.$bg-blue;
+    box-shadow: 0 5px 10px v.$bg-blue;
+    transition: all 0.5s ease-in-out;
+    @media (max-width: v.$media667) {
+      // margin-top: -200%;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      &.open-menu {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        top: 78px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        overflow-y: auto;
+      }
+    }
+  }
+  // .header__list
+  &__list {
+    @include m.d-flex(center, space-between, wrap);
+    padding-block: 31px;
+    @media (max-width: v.$media667) {
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  // .header__item
+  &__item {
+    &_hidden {
+      display: none;
+      @media (max-width: v.$media667) {
+        display: block;
+      }
+    }
+    &_mobile-visible {
+      display: block;
+    }
+  }
+  // .header__link
+  &__link {
+    font-family: v.$font-family;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: v.$color-white;
+    @media (max-width: v.$media768) {
+      font-size: 12px;
+    }
+  }
+}
