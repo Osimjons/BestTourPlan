@@ -686,6 +686,11 @@ use {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(10, 34, 61, 0.8))), url(../img/Rectangle25.jpg) center/cover no-repeat;
   background: linear-gradient(rgba(10, 34, 61, 0.8)), url(../img/Rectangle25.jpg) center/cover no-repeat;
 }
+@media (max-width: 627px) {
+  .subscribe {
+    padding: 76px 0px 83px 10px;
+  }
+}
 .subscribe__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -714,11 +719,21 @@ use {
         flex-wrap: nowrap;
   }
 }
+@media (max-width: 627px) {
+  .subscribe__wrap {
+    display: block;
+  }
+}
 .subscribe__suptitle {
   font-family: "Mulish", sans-serif;
   font-weight: 300;
   font-size: 24px;
   color: #fff;
+}
+@media (max-width: 627px) {
+  .subscribe__suptitle {
+    margin-bottom: 5px;
+  }
 }
 .subscribe__title {
   font-family: "Mulish", sans-serif;
@@ -726,4 +741,9 @@ use {
   font-size: 36px;
   text-transform: uppercase;
   color: #fff;
+}
+@media (max-width: 627px) {
+  .subscribe__title {
+    margin-bottom: 40px;
+  }
 }

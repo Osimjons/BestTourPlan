@@ -4,6 +4,9 @@
   padding-block: 98px 87px;
   background: linear-gradient(rgba(10, 34, 61, 0.8)),
     url(../img/Rectangle25.jpg) center/cover no-repeat;
+    @media (max-width: v.$media627){
+      padding: 76px 0px 83px 10px;
+    }
   // .subscribe__container
   &__container {
   }
@@ -12,6 +15,9 @@
     @include m.d-flex(center, space-evenly);
     @media (max-width: v.$media768) {
       @include m.d-flex(center, space-between);
+    }
+    @media (max-width: v.$media627) {
+      display: block;
     }
   }
   // .subscribe__text-block
@@ -23,6 +29,9 @@
     font-weight: 300;
     font-size: 24px;
     color: v.$color-white;
+    @media (max-width: v.$media627) {
+      margin-bottom: 5px;
+    }
   }
   // .subscribe__title
   &__title {
@@ -31,6 +40,9 @@
     font-size: 36px;
     text-transform: uppercase;
     color: v.$color-white;
+    @media (max-width: v.$media627) {
+      margin-bottom: 40px;
+    }
   }
   // .subscribe__input-block
   &__input-block {
