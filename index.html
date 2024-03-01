@@ -5,7 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/index.css" />
-  <script src="js/script.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
   <title>Best Tour Plan</title>
 </head>
 
@@ -122,7 +124,6 @@
             </div>
           </div>
           <div class="hero__main main">
-            <!-- grid -->
             <div class="main__slider-block">
               <img src="img/hero-bg.jpg" alt="hero bg" class="main__slider" />
             </div>
@@ -149,20 +150,42 @@
                 </div>
                 <div class="price-card__bottom">
                   <span>Quick Booking</span>
-                  <span>12100</span>
+                  <a class="price-card__bottom-call" type="tel:12100" href="tel:12100">12100</a>
                 </div>
                 <button class="button btn-big">View Other Options</button>
               </div>
             </div>
             <div class="main__map">
-              <img src="img/Map.jpg " alt="map">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A950894689ee9c1e663337e65b62627e0015cd0bf2aad176eb35abf112243f846&amp;source=constructor"
+                width="320" height="240" frameborder="0"></iframe>
             </div>
           </div>
+        </div>
+      </section>
+      <section class="subscribe">
+        <div class="subscribe__container">
+          <div class="subscribe__wrap">
+
+            <div class="subscribe__text-block">
+              <p class="subscribe__suptitle">subscribe to our</p>
+              <h2 class="subscribe__title">Newsletter</h2>
+            </div>
+            <div class="subscribe__input-block">
+              <div class="input">
+                <input autocomplete="off" type="e-mail" placeholder="Your email address" class="input__inp" />
+                <button type="button" class="button input__btn">send</button>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
     </main>
     <footer class="footer">footer</footer>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/script.js" defer></script>
 </body>
 
 </html>

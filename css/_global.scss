@@ -40,6 +40,8 @@ use {
   }
 }
 [class*="__container"] {
+  border-left: 1px solid #D4de31;
+  border-right: 1px solid #D4de31;
   max-width: 1040px;
   padding-inline: 15px;
   margin-inline: auto;

@@ -1,0 +1,38 @@
+@use "variabless" as v;
+@use "mixins" as m;
+.subscribe {
+  padding-block: 98px 87px;
+  background: linear-gradient(rgba(10, 34, 61, 0.8)),
+    url(../img/Rectangle25.jpg) center/cover no-repeat;
+  // .subscribe__container
+  &__container {
+  }
+  // .subscribe__wrap
+  &__wrap {
+    @include m.d-flex(center, space-evenly);
+    @media (max-width: v.$media768) {
+      @include m.d-flex(center, space-between);
+    }
+  }
+  // .subscribe__text-block
+  &__text-block {
+  }
+  // .subscribe__suptitle
+  &__suptitle {
+    font-family: v.$font-family;
+    font-weight: 300;
+    font-size: 24px;
+    color: v.$color-white;
+  }
+  // .subscribe__title
+  &__title {
+    font-family: v.$font-family;
+    font-weight: 600;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: v.$color-white;
+  }
+  // .subscribe__input-block
+  &__input-block {
+  }
+}

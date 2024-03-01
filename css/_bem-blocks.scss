@@ -35,8 +35,10 @@
   }
 }
 .button {
+  
+  color: v.$color-white;
   border:none;
-  border-radius: 4px;
+  // border-radius: 4px;
   background-color: v.$bg-btn;
   cursor: pointer;
   &:active {
