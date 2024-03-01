@@ -101,14 +101,14 @@ use {
 .button {
   color: #fff;
   border: none;
-  background-color: #E6143A;
+  background-color: #e6143a;
   cursor: pointer;
 }
 .button:active {
   background-color: rgba(236, 31, 68, 0.7137254902);
 }
 .button :focus {
-  outline-color: #E6143A;
+  outline-color: #e6143a;
 }
 
 .burger {
@@ -436,7 +436,7 @@ use {
   font-weight: 600;
   font-size: 10px;
   color: #fff;
-  background-color: #E6143A;
+  background-color: #e6143a;
   padding: 5px 9px;
   border-radius: 3px;
   -webkit-transform: translateX(-50%);
@@ -472,7 +472,7 @@ use {
       -ms-flex-align: center;
           align-items: center;
   justify-self: flex-end;
-  background-color: #E6143A;
+  background-color: #e6143a;
   padding: 8px;
   border-radius: 5px;
 }
@@ -744,4 +744,90 @@ use {
   .subscribe__title {
     margin-bottom: 40px;
   }
+}
+@media (max-width: 390px) {
+  .subscribe__input {
+    width: 100%;
+  }
+}
+
+.about__wrap {
+  padding-block: 40px 60px;
+}
+.about__title {
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+  font-size: clamp(18px, 3.4615384615vw, 36px);
+  text-transform: uppercase;
+  text-align: center;
+  color: #333;
+  margin-bottom: 165px;
+}
+@media (max-width: 390px) {
+  .about__title {
+    width: 245px;
+    margin-inline: auto;
+  }
+}
+.box {
+  background: url(../img/svg/66.svg) 65px 10px/100px no-repeat, url(../img/svg/99.svg) 95% 40%/100px no-repeat;
+  background-color: #fff;
+  border-radius: 8px;
+  max-width: 731px;
+  min-height: 280px;
+  margin-inline: auto;
+}
+.box__user-info {
+  max-width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-inline: auto;
+  margin-top: -50px;
+}
+.box__user-photo {
+  width: 90px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-top: -50%;
+}
+.box__user-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 5px;
+}
+.box__user-name {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 12px;
+  color: #ec1f46;
+  margin-bottom: 10px;
+}
+.box__user-date {
+  margin-bottom: 5px;
+}
+.box__comment {
+  padding: 30px 95px;
+}
+.box__comment-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  text-align: justify;
+  color: #333;
 }

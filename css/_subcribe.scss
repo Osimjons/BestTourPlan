@@ -4,9 +4,9 @@
   padding-block: 98px 87px;
   background: linear-gradient(rgba(10, 34, 61, 0.8)),
     url(../img/Rectangle25.jpg) center/cover no-repeat;
-    @media (max-width: v.$media627){
-      padding: 76px 0px 83px 10px;
-    }
+  @media (max-width: v.$media627) {
+    padding: 76px 0px 83px 10px;
+  }
   // .subscribe__container
   &__container {
   }
@@ -44,7 +44,10 @@
       margin-bottom: 40px;
     }
   }
-  // .subscribe__input-block
-  &__input-block {
+  // .subscribe__input
+  &__input {
+    @media (max-width: v.$media390) {
+      width: 100%;
+    }
   }
 }
