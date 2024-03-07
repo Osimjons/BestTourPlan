@@ -918,6 +918,7 @@ use {
 }
 .box__comment {
   padding: 30px 95px;
+  min-height: 240px;
 }
 @media (max-width: 768px) {
   .box__comment {

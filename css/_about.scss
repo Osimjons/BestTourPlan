@@ -85,6 +85,7 @@
   // .box__comment
   &__comment {
     padding: 30px 95px;
+    min-height: 240px;
 
     @media (max-width: v.$media768) {
       padding: 30px 60px;
