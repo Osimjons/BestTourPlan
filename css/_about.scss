@@ -86,6 +86,7 @@
   &__comment {
     padding: 30px 95px;
     min-height: 240px;
+    flex: 1 1 auto;
 
     @media (max-width: v.$media768) {
       padding: 30px 60px;
