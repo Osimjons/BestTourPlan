@@ -2,6 +2,7 @@
 @use "mixins" as m;
 
 .activities {
+  margin-bottom: 100px;
 
   // .activities__title
   &__title {
@@ -27,7 +28,7 @@
     }
 
     @media (max-width: v.$media500) {
-      grid-template-columns: repeat(1, minmax(auto, 1fr));
+      grid-template-columns: repeat(1, minmax(340px, 1fr));
       place-items: center;
 
       .card {
